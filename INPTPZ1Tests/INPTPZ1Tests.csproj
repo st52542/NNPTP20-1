@@ -56,11 +56,13 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="CplxTests.cs" />
+    <Compile Include="ComplexNumberTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\INPTPZ1\INPTPZ1.csproj">
