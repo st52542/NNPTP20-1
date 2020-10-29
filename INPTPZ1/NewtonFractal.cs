@@ -106,17 +106,17 @@ namespace INPTPZ1
             polynomNumbers.ListOfComplexNumber.Add(new ComplexNumber() { RealPartOfNumber = 1 });
             derivedPolynomNumber = polynomNumbers.Derive();
         }
-        private static void FindAndSetColors(int i, int j, int iteration, int id)
+        private static void FindAndSetColors(int bitmapWidth, int bitmapHeight, int iteration, int id)
         {
             var color = colors[id % colors.Length];
             color = Color.FromArgb(color.R, color.G, color.B);
             color = Color.FromArgb(Math.Min(Math.Max(0, color.R - (int)iteration * 2), 255), Math.Min(Math.Max(0, color.G - (int)iteration * 2), 255), Math.Min(Math.Max(0, color.B - (int)iteration * 2), 255));
-            bitmap.SetPixel(j, i, color);
+            bitmap.SetPixel(bitmapHeight, bitmapWidth, color);
         }
-        private static ComplexNumber complexNumber(int i, int j)
+        private static ComplexNumber complexNumber(int bitmapWidth, int bitmapHeight)
         {
-            double numberImaginarPart = yMinimum + i * yStep;
-            double numberRealPart = xMinimum + j * xStep;
+            double numberImaginarPart = yMinimum + bitmapWidth * yStep;
+            double numberRealPart = xMinimum + bitmapHeight * xStep;
 
             ComplexNumber newComplexNumber = new ComplexNumber()
             {
