@@ -14,8 +14,8 @@ namespace INPTPZ1
             {
                 if (objectForCheck is ComplexNumber)
                 {
-                    ComplexNumber compareWithPartsOfComplexNumber = objectForCheck as ComplexNumber;
-                    return compareWithPartsOfComplexNumber.RealPartOfNumber == RealPartOfNumber && compareWithPartsOfComplexNumber.ImaginarPartOfNumber == ImaginarPartOfNumber;
+                    ComplexNumber complexNumber = objectForCheck as ComplexNumber;
+                    return complexNumber.RealPartOfNumber == RealPartOfNumber && complexNumber.ImaginarPartOfNumber == ImaginarPartOfNumber;
                 }
                 return base.Equals(objectForCheck);
             }
